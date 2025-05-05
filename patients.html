@@ -1,0 +1,12 @@
+<h2>Patient List</h2>
+<ul>
+    {% for patient in patients %}
+    <li>{{ patient.name }} ({{ patient.age }} years old)</li>
+    {% endfor %}
+</ul>
+<form method="post">
+    Name: <input type="text" name="name">
+    Age: <input type="number" name="age">
+    <input type="submit" value="Add Patient">
+</form>
+<a href="/">Back</a>

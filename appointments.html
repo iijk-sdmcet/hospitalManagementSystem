@@ -1,0 +1,12 @@
+<h2>Appointments</h2>
+<ul>
+    {% for appointment in appointments %}
+    <li>Patient ID: {{ appointment.patient_id }}, Doctor ID: {{ appointment.doctor_id }}</li>
+    {% endfor %}
+</ul>
+<form method="post">
+    Patient ID: <input type="number" name="patient_id">
+    Doctor ID: <input type="number" name="doctor_id">
+    <input type="submit" value="Book Appointment">
+</form>
+<a href="/">Back</a>
